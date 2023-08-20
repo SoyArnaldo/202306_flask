@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block style %}
+.content{
+	max-width:  {{context["width"]}}px;
+
+	.block {
+		background-color: {{context["color1"]}};
+	}
+
+	.blockk {
+		background-color: {{context["color2"]}};
+	}
+}
+{% endblock%}
+{% block contents %}
+	{% for i in range(context["num1"]) %}
+		{% for j in range(context["num2"]) %}
+		<div class="block"></div>
+		<div class="blockk"></div>
+		{% endfor%}
+		{% for k in range(context["num2"]) %}
+		<div class="blockk"></div>
+		<div class="block"></div>
+		{% endfor%}
+	{% endfor%}
+{% endblock%}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block style %}
+.content{
+	max-width: {{width}}px;
+	}
+{% endblock%}
+{% block contents %}
+	{% for i in range(num1) %}
+		{% for j in range(num2) %}
+		<div class="block"></div>
+		<div class="blockk"></div>
+		{% endfor%}
+		{% for k in range(num2) %}
+		<div class="blockk"></div>
+		<div class="block"></div>
+		{% endfor%}
+	{% endfor%}
+{% endblock%}

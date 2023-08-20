@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+	<form action="{{url_for('process')}}" class="container" style="width: 500px;" method="post">
+		<div class="row-justify-content-center">
+			<label for="name_user" class="col-form-label">Name</label>
+			<input type="text" class="form-control " name="name_user" id="name_user">
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<label for="user_language" class="col-form-label">Favorite Language:</label>
+				<select class="form-select" name="user_language" id="user_language">
+					<option value="HTML">HTML</option>
+					<option value="Python">Python</option>
+					<option value="JavaScript">JavaScript</option>
+					<option value="CSS">CSS</option>
+				</select>
+			</div>
+			<div class="col-6">
+				<label for="user_location" class="col-form-label">Dojo Location:</label>
+				<select class="form-select" name="user_location" id="user_location">
+					<option value="Chicago">Chicago</option>
+					<option value="California">California</option>
+					<option value="Seattle">Seattle</option>
+					<option value="San Jose">San Jose</option>
+				</select>
+			</div>
+		</div>
+		<div class="row-justify-content-center">
+			<label for="user_comments" class="col-form-label">Comments:</label>
+			<textarea class="form-control" name="user_comments" id="user_comments" rows="4" cols="8"></textarea>
+		</div>
+		<div class="mt-2">
+			<button class="btn btn-primary" type="submit">Submit</button>
+		</div>
+	</form>	
+{% endblock%}

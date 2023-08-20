@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="container " style="width: 500px;">
+		<h1>Submitted Info</h1>
+		<div class="row justify-content-evenly ">
+			<div class="col-6">
+				{% for dato in data%}
+					<p text-center>{{dato}}</p>
+				{% endfor%}
+			</div>
+			<div class="col-4">
+				<p>{{session.data["name_user"]}}</p>
+				<p>{{session.data["user_language"]}}</p>
+				<p>{{session.data["user_location"]}}</p>
+				<p>{{session.data["user_comments"]}}</p>
+			</div>
+		</div>
+		<div class="d-grid gap-2 col-2 mx-auto mt-4">
+			<button class="btn btn-primary "> <a href="{{url_for('home')}}">Home</a> </button>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block style %}
+{% endblock%}
+{% block contents %}
+	{% for i in range(id) %}
+		{% for j in range(4) %}
+		<div class="block"></div>
+		<div class="blockk"></div>
+		{% endfor%}
+		{% for k in range(4) %}
+		<div class="blockk"></div>
+		<div class="block"></div>
+		{% endfor%}
+	{% endfor%}
+{% endblock%}
